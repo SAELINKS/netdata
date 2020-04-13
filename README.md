@@ -210,7 +210,15 @@ metrics, but also troubleshoot complex performance problems.
 
 ## News
 
-`April 6, 2020` - **[Netdata v1.21.0 released!](https://github.com/netdata/netdata/releases)**
+`April 13, 2020` - **[Netdata v1.21.0 released!](https://github.com/netdata/netdata/releases/tag/v1.21.1)**
+
+Release v1.21.1 is a hotfix release to improve the performance of the new React dashboard, which was merged and enabled by default in v1.21.0.
+
+The React dashboard shipped in v1.21.0 did not properly freeze charts that were outside of the browser's viewport. If a user who loaded many charts by scrolling through the dashboard, charts outside of their browser's viewport continued updating. This excess of chart updates caused _all_ charts to update more slowly than every second.
+
+v.1.21.1 includes improvements to the way the Netdata dashboard freezes, maintains state, and restores charts as users scroll.
+
+`April 6, 2020` - **[Netdata v1.21.0 released!](https://github.com/netdata/netdata/releases/tag/v1.21.0)**
 
 Release v1.21.0 contains 2 new collectors, 3 new exporting connectors, 37 bug fixes, 46 improvements, and 25 documentation updates. We also made 26 bug fixes or improvements related to the upcoming release of Netdata Cloud.
 
